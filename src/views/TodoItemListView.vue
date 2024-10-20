@@ -47,9 +47,9 @@ function omTaskStatusChange(task: Task) {
 </script>
 
 <template>
-  <div class="h-full bg-surface-100 dark:bg-surface-700">
-    <div class="h-full p-6 overscroll-contain overflow-auto">
-      <ul class="h-full space-y-2">
+  <div class="h-full overscroll-contain overflow-auto bg-surface-100 dark:bg-surface-700">
+    <div class="p-6">
+      <ul class="space-y-2">
         <li v-for="task in tasks" :key="task.id">
           <Card class="dark:!bg-surface-800">
             <template #content>

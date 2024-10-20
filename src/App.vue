@@ -4,11 +4,13 @@ import NavigationBar from './components/NavigationBar.vue';
 </script>
 
 <template>
-  <header class="flex-none">
-    <NavigationBar/>
-  </header>
-  <div class="h-full">
-    <RouterView />
+  <div class="h-full flex flex-col">
+    <header class="flex-none">
+      <NavigationBar/>
+    </header>
+    <div class="flex-grow overflow-hidden">
+      <RouterView />
+    </div>
   </div>
 </template>
 

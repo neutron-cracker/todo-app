@@ -40,18 +40,20 @@ function omTaskStatusChange(task: TodoItem) {
 </script>
 
 <template>
-  <div class="h-full">
-    <ul class="h-full space-y-2">
-      <li v-for="task in todos" :key="task.id">
-        <Card>
-          <template #content>
-            <div class="space-x-4 flex">
-              <Checkbox class="flex-none" :model-value="task.completed" :binary="true" :input-id="task.id.toString()" v-on:change="_ => omTaskStatusChange(task)" />
-              <label class="flex-grow" :class="task.completed ? 'line-through' : ''" :for="task.id.toString()">{{ task.title }}</label>
-            </div>
-          </template>
-        </Card>
-      </li>
-    </ul>
+  <div class="h-full bg-surface-100 dark:bg-surface-700">
+    <div class="h-full p-6 overscroll-contain overflow-auto">
+      <ul class="h-full space-y-2">
+        <li v-for="task in todos" :key="task.id">
+          <Card class="dark:!bg-surface-800">
+            <template #content>
+              <div class="space-x-4 flex">
+                <Checkbox class="flex-none" :model-value="task.completed" :binary="true" :input-id="task.id.toString()" v-on:change="_ => omTaskStatusChange(task)" />
+                <label class="flex-grow" :class="task.completed ? 'line-through' : ''" :for="task.id.toString()">{{ task.title }}</label>
+              </div>
+            </template>
+          </Card>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>

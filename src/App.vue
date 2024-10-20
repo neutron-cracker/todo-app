@@ -7,7 +7,7 @@ import NavigationBar from './components/NavigationBar.vue';
   <header class="flex-none">
     <NavigationBar/>
   </header>
-  <div class="overscroll-contain overflow-auto inline-block p-6">
+  <div class="h-full">
     <RouterView />
   </div>
 </template>
